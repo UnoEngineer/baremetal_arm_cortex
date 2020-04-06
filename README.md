@@ -34,10 +34,11 @@ Presented example is very simple "Hello blinky" program for STM32F0xx which blin
 ## Building
 
 ```
-mkdir _build
-cd _build
-cmake -D CMAKE_TOOLCHAIN_FILE=../cmake/arm-none-eabi.cmake -D CMAKE_BUILD_TYPE=Release ..
-make
+$ git clone @github.com:UnoEngineer/baremetal_arm_cortex.git
+$ mkdir _cmake
+$ cd _cmake
+$ cmake -D CMAKE_BUILD_TYPE=Release ../baremetal_arm_cortex
+$ make -j8
 ```
 
 change `CMAKE_BUILD_TYPE=Debug` to build debug version.
