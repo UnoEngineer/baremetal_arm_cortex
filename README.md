@@ -34,7 +34,13 @@ Presented example is very simple "Hello blinky" program for STM32F0xx which blin
 ## Building
 
 ```
-$ git clone @github.com:UnoEngineer/baremetal_arm_cortex.git
+$ git clone https://github.com/UnoEngineer/baremetal_arm_cortex.git
+```
+
+Set the variables MAKE_CXX_COMPILER and CMAKE_C_COMPILER to the toolchain directory
+under ./cmake/arm-none-eabi.cmake
+
+```
 $ mkdir _cmake
 $ cd _cmake
 $ cmake -D CMAKE_BUILD_TYPE=Release ../baremetal_arm_cortex
