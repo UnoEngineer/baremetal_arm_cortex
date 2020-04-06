@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
 
+include("./cmake/flash.cmake")
+include("./cmake/arm-none-eabi.cmake")
+
 # project name
-project(baremetal)
+project(baremetal_arm_cortex)
 
 # select linker script
 set(LINKER_SCRIPT "ld/stm32f031x6.ld")
@@ -69,4 +72,4 @@ target_link_libraries(${PROJECT_NAME}
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY LINK_DEPENDS ${CMAKE_SOURCE_DIR}/${LINKER_SCRIPT})
 
-include("cmake/flash.cmake")
+#include("cmake/flash.cmake")
